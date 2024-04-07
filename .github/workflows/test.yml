@@ -1,0 +1,14 @@
+---
+name: A simple Docker action
+on:
+  issues:
+    types: [opened, edited, labeled]
+jobs:
+  user-and-time:
+    name: Running a simple bash script
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: A simple bash script
+        id: BASH
+        uses: phatblat/gha-docker-container-action@main
